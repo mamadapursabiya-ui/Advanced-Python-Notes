@@ -58,10 +58,4 @@ These notes are useful for:
 - Multithreading
 - Functional Programming Concepts
 
-## Future Topics
 
-More Python concepts, examples, and interview questions will be added as I continue learning.
-
----
-
-**Author:** Sabiya
