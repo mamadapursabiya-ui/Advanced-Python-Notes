@@ -1,0 +1,39 @@
+class WeakPasswordError(Exception):
+
+    def __init__(self, password,msg):
+        self.password = password
+        self.msg = msg
+
+    def check_pw(self):
+        if len(self.password) < 8:
+            raise e
+
+user_pw = input("enter the password: ")
+e = WeakPasswordError(user_pw,"Password shd have atleast 8 chars")
+try:
+    e.check_pw()
+except WeakPasswordError as e1:
+    print(f"{e1.msg}:{user_pw}")
+else:
+    print("Strong Password")
+
+
+class WeakPasswordError(Exception):
+
+    def __init__(self, password):
+        self.password = password
+
+    def __str__(self):
+        return f"{self.password} is a weak Password"
+
+user_pw = input("enter the password: ")
+try:
+    if len(user_pw) < 8:
+        raise WeakPasswordError(user_pw)
+except WeakPasswordError as e:
+    print(e)
+else:
+    print("Strong Password") 
+
+Jul 21 - 4:56 pm
+Custom exception using custom attributes👆
